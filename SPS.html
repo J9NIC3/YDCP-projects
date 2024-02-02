@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Scissors Paper Stone</title>
+        <script>
+            var number=0;
+            
+            //var=variable
+            function play()
+            {
+                number=Math.floor(Math.random()*3);
+                alert("Computer:"+number);
+                var myguess=document.getElementById("txtNumber").value;
+                //take up the number guessed by the person 
+                if(myguess==0&&number==1)
+                {
+                    alert("You win!");
+                }
+                else if(myguess==2&&number==0)
+                {
+                    alert("You win!");
+                    
+                }
+                else if(myguess==1&&number==2)
+                {
+                    alert("You win!");
+                    
+                }
+                else if(myguess==number)
+                {
+                    alert("Draw");
+                    
+                }
+                else
+                {
+                    alert("You lose!");
+                }
+                document.getElementById("txtNumber").value="";
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h1>Scissors Paper Stone</h1>
+        <h1>0=scissors, &nbsp; 1=paper, &nbsp; 2=stone</h1>
+        <form>
+            <label>Number:</label>
+            <input type="text" id="txtNumber">
+            <button type="button" onclick="play()">Play</button>
+            
+           
+            
+        </form>
+    </body>
+</html>

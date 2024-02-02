@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Guess the Number</title>
+        <script>
+            var number=0;
+            //var=variable
+            function restart()
+            {
+                number=Math.floor(Math.random()*10);
+                document.getElementById("txtNumber").value='';
+                //make the number in the box disappear
+            }
+            function guess()
+            {
+                var myguess=document.getElementById("txtNumber").value;
+                //take up the number guessed by the person 
+                if(myguess==number)
+                {
+                    alert("You got it!");
+                }
+                else
+                {
+                    alert("Try again!");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Guess a Number Between 0 to 9</h1>
+        <form>
+            <label>Number:</label>
+            <input type="text" id="txtNumber">
+            <button type="button" onclick="restart()">Restart</button>
+            <button type="button" onclick="guess()">Guess</button>
+            
+        </form>
+    </body>
+</html>
